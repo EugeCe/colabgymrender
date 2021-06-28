@@ -54,8 +54,6 @@ class Recorder(gym.Wrapper):
 
             frame = cv2.putText(frame, "ciao", font, position, fontScale, fontColor, lineType)
 
-            cv2.imshow("img", frame)
-
             self._writer.write(frame)
 
     def release(self):
