@@ -48,11 +48,13 @@ class Recorder(gym.Wrapper):
 
             font = cv2.FONT_HERSHEY_SIMPLEX
             position = (self.size[0]/2,self.size[1]/2)
-            fontScale = 1
+            fontScale = 2
             fontColor = (255, 255, 255)
             lineType = 2
 
             frame = cv2.putText(frame, "ciao", font, position, fontScale, fontColor, lineType)
+
+            cv2.imshow("img", frame)
 
             self._writer.write(frame)
 
