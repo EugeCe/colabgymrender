@@ -52,7 +52,8 @@ class Recorder(gym.Wrapper):
             fontColor = (255, 255, 255)
             lineType = 2
 
-            cv2.putText(frame, "ciao", font, position, fontScale, fontColor, lineType)
+            frame = cv2.putText(frame, "ciao", font, position, fontScale, fontColor, lineType)
+
             self._writer.write(frame)
 
     def release(self):
